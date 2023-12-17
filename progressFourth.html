@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Year Progress - CSE Department</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(3, 3, 30);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 1em;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column; /* Adjusted to stack logo and text vertically */
+            align-items: center; /* Adjusted to center text horizontally */
+        }
+
+        .logo {
+            max-width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        header:hover .logo {
+            transform: scale(1.1);
+        }
+        header:hover {
+            color: #7b7bff;
+            
+            }
+
+        main {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .chart-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        @media (max-width: 600px) {
+            .chart-container {
+                width: 100%;
+            }
+        }
+
+        /* Adjusted to move logo to the top left */
+        header > div:first-child {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./assets/ABES.jpg" alt="Your Logo" class="logo">
+        </div>
+        <div>FOURTH YEAR PROGRESS</div>
+    </header>
+    <main>
+        <div class="progress-section">
+            <h2>Section A</h2>
+            <div class="chart-container">
+                <canvas id="chartA"></canvas>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h2>Section B</h2>
+            <div class="chart-container">
+                <canvas id="chartB"></canvas>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h2>Section C</h2>
+            <div class="chart-container">
+                <canvas id="chartC"></canvas>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h2>Section D</h2>
+            <div class="chart-container">
+                <canvas id="chartD"></canvas>
+            </div>
+        </div>
+
+        <!-- Include Chart.js library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+        <script>
+            // Sample data for the charts
+            var dataA = {
+                labels: ['Madhvi Gaur', 'Indu Malik', 'Vivek Saxena', 'Teena Garg'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [60, 92, 40, 70],
+                    backgroundColor: '#7b7bff',
+                    borderColor: '#7b7bff',
+                    borderWidth: 2
+                }]
+            };
+
+            var dataB = {
+                labels: ['Amit Kumar', 'Karanjeet Mishra', 'Shweta Roy', 'Sucheta Singh'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [30, 56, 78, 38],
+                    backgroundColor: '#7b7bff',
+                    borderColor: '#7b7bff',
+                    borderWidth: 2
+                }]
+            };
+
+            var dataC = {
+                labels: ['Ganesh Kumar', 'Seema Malik', 'Waseem Ahmed', 'Vikas chaudhary'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [40, 70, 80, 64],
+                    backgroundColor: '#7b7bff',
+                    borderColor: '#7b7bff',
+                    borderWidth: 2
+                }]
+            };
+
+            var dataD = {
+                labels: ['Parag Arora', 'Lokesh Sharma', 'Reeta Jain', 'Arvind Garg'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [60, 30, 75, 45],
+                    backgroundColor: '#7b7bff',
+                    borderColor: '#7b7bff',
+                    borderWidth: 2
+                }]
+            };
+
+            // Chart configuration
+            var config = {
+                type: 'bar',
+                options: {
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Mentors'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Progress (%)'
+                            }
+                        }
+                    }
+                }
+            };
+
+            // Create the charts
+            var ctxA = document.getElementById('chartA').getContext('2d');
+            new Chart(ctxA, {
+                ...config,
+                data: dataA
+            });
+
+            var ctxB = document.getElementById('chartB').getContext('2d');
+            new Chart(ctxB, {
+                ...config,
+                data: dataB
+            });
+
+            var ctxC = document.getElementById('chartC').getContext('2d');
+            new Chart(ctxC, {
+                ...config,
+                data: dataC
+            });
+
+            var ctxD = document.getElementById('chartD').getContext('2d');
+            new Chart(ctxD, {
+                ...config,
+                data: dataD
+            });
+        </script>
+    </main>
+</body>
+
+</html>

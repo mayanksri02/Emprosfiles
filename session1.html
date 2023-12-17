@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(3, 3, 30);
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+    header {
+      background-color: white;
+      color: black;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+      position: relative;
+      border-radius: 8px;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    header:hover .logo {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      flex: 1;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    header:hover {
+      color: #7b7bff;
+    }
+
+    .content {
+      width: 80%;
+      margin: 20px auto;
+      background-color: #3d405b;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .member-details {
+      margin-bottom: 20px;
+    }
+
+    .project-details {
+      padding: 20px;
+      background-color: #5d6292;
+      border-radius: 8px;
+    }
+
+    .progress-range {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="./assets/ABES.jpg" alt="Your Logo" class="logo">
+    </div>
+    <h1>Project Details </h1>
+  </header>
+
+  <div class="content">
+    <div class="member-details">
+      <h2>Members Name</h2>
+      <!-- Assume member name is fetched from the session -->
+      <p>KSHITIZ SINGHAL</p>
+      <p>KSHITIZ SRIVASTAVA</p>
+      <p>MAYANK SRIVASTAV</p>
+    </div>
+
+    <div class="project-details">
+      <h2>Project Information</h2>
+      <p><strong>Project Name:</strong>EMPROSS</p>
+      <p><strong>Project ID:</strong> PRJ0001</p>
+      <p><strong>Project Description:</strong> Project Managing System ..Digitalize The Whole Project Work.</p>
+      
+      <p><strong>Guide Name:</strong>Prof.Shanu Sharma </p>
+      
+      <p><strong>Number Of WPR Submitted:</strong> 5</p>
+    </div>
+
+    <div class="progress-range">
+      <label for="progress">Project Progress:</label>
+      <input type="range" id="progress" name="progress" min="0" max="100" step="4" value="50">
+     
+    </div>
+  </div>
+
+ 
+</body>
+</html>

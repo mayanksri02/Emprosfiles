@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor-Mentee Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(3, 3, 30);
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 1em;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .logo {
+            max-width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        header:hover .logo {
+            transform: scale(1.1);
+        }
+        header:hover {
+            color: #7b7bff;
+            
+            }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .mentor-section {
+            margin-bottom: 30px;
+        }
+
+        .mentor-name {
+            font-size: 1.5em;
+            color: #7b7bff;
+            margin-bottom: 10px;
+        }
+
+        .mentees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .mentee {
+            background-color: #3a3e5f;
+            padding: 15px;
+            border-radius: 34px;
+            box-shadow: 8px 4px 35px rgba(156, 179, 248, 0.1);
+        }
+
+        .mentee-name {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .mentee-details {
+            font-size: 1em;
+            color: #a8a8a8;
+        }
+
+        .search-container {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .chart-container {
+                width: 100%;
+            }
+        }
+
+        /* Adjusted to move logo to the top left */
+        header > div:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Adjusted to align logo to the left */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./assets/ABES.jpg" alt="Your Logo" class="logo">
+        </div>
+        <div>Current Mentor-Mentee</div>
+        
+    </header>
+    <main>
+        <div class="mentor-section">
+            <div class="mentor-name">Mentor: Asst. Prof Shanu Sharma</div>
+            <div class="mentees-grid">
+                <!-- Mentor 1 -->
+                <div class="mentee">
+                    <div class="mentee-name">Kshitiz Singhal</div>
+                    <div class="mentee-details">ID: PRJ0001 | Project: Empross</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Mayank Srivastava</div>
+                    <div class="mentee-details">ID: PRJ0001 | Project: Empross</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Mayank Kumar</div>
+                    <div class="mentee-details">ID: PRJ0003 | Project: Mobile App Development</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Harshit Verma</div>
+                    <div class="mentee-details">ID: PRJ0004 | Project: Machine Learning</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Kshitiz Srivastav</div>
+                    <div class="mentee-details">ID: PRJ0001 | Project: Cybersecurity</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Kartik</div>
+                    <div class="mentee-details">ID: PRJ0006 | Project: UI/UX Design</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Rohit</div>
+                    <div class="mentee-details">ID: PRJ0006 | Project: UI/UX Design</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mentor-section">
+            <div class="mentor-name">Mentor: Ms.Seema Malik</div>
+            <div class="mentees-grid">
+                <!-- Mentor 2 -->
+                <div class="mentee">
+                    <div class="mentee-name">Vishwas</div>
+                    <div class="mentee-details">ID: PRJ101 | Project: Artificial Intelligence</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Yash Agarwal</div>
+                    <div class="mentee-details">ID: PRJ102 | Project: Web Security</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Vansh Singhal</div>
+                    <div class="mentee-details">ID: PRJ102 | Project: Web Security</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Vivek Bansal</div>
+                    <div class="mentee-details">ID: PRJ104 | Project: Data Science</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Vedang Verma</div>
+                    <div class="mentee-details">ID: PRJ105 | Project: Software Engineering</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Vijit</div>
+                    <div class="mentee-details">ID: PRJ106 | Project: IoT</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Vatsal</div>
+                    <div class="mentee-details">ID: PRJ107 | Project:IOT</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more mentors as needed -->
+        <div class="mentor-section">
+            <div class="mentor-name">Mentor: Asst. Prof Kanchan Verma</div>
+            <div class="mentees-grid">
+                <!-- Mentor 1 -->
+                <div class="mentee">
+                    <div class="mentee-name">Kshitiz Singhal</div>
+                    <div class="mentee-details">ID: PRJ0001 | Project: Empross</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Mayank Srivastav</div>
+                    <div class="mentee-details">ID: PRJ0001 | Project: Empross</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Mayank Kumar</div>
+                    <div class="mentee-details">ID: PRJ0003 | Project: Mobile App Development</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Harshit Verma</div>
+                    <div class="mentee-details">ID: PRJ0004 | Project: Machine Learning</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Kshitiz Srivastav</div>
+                    <div class="mentee-details">ID: PRJ0001 | Project: Cybersecurity</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Kartik</div>
+                    <div class="mentee-details">ID: PRJ0006 | Project: UI/UX Design</div>
+                </div>
+                <div class="mentee">
+                    <div class="mentee-name">Rohit</div>
+                    <div class="mentee-details">ID: PRJ0006 | Project: UI/UX Design</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+
+</html>

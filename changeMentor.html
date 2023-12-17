@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change PL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(3, 3, 30);
+            color: #031b4f;
+            transition: background 0.3s ease;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 1em;
+            text-align: center;
+            font-size: 1.8em;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+            position: relative;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        header:hover .logo {
+            transform: scale(1.1);
+        }
+
+        header:hover {
+            color: #7b7bff;
+        }
+
+        body:hover header:hover::before {
+            opacity: 1;
+        }
+        ::placeholder{
+            color: #000000;
+        }
+
+        .container {
+            background-color: #9396af;
+            padding: 20px;
+            border-radius: 60px;
+            box-shadow: 10px 24px 27px rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin: 20px 0 0 300px;
+            width: 50%;
+            justify-content: center;
+            float:left;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: calc(100% - 50px); /* Adjusted width */
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #4184ef;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #7b7bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #665dff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./assets/ABES.jpg" alt="Your Logo" class="logo">
+        </div>
+        <h1 style="flex: 1;">CHANGE MENTOR</h1>
+    </header>
+
+    <div class="container">
+        <form id="teacherForm">
+            <label for="currentTeacher">CURRENT MENTOR:</label>
+            <input type="text" id="currentTeacher" placeholder="Enter Current Mentor's Teacher's I'D" required;>
+
+            <label for="newTeacher">NEW MENTOR:</label>
+            <input type="text" id="newTeacher" placeholder="Enter New Mentor's Teacher's I'D">
+
+            <button type="button" onclick="promptForPassword()">Replace Mentor</button>
+        </form>
+    </div>
+
+    <script>
+        function promptForPassword() {
+            var password = prompt("Please enter the access password:");
+
+            // Replace 'your_password' with the actual password
+            if (password === "1234") {
+                alert("Access Granted!Thanks Programme Leader");
+            
+                replaceTeacher();
+            } else {
+                alert("Incorrect password.Mentor replacement not allowed.");
+            }
+        }
+
+        function replaceTeacher() {
+            var currentTeacher = document.getElementById('currentTeacher').value;
+            var newTeacher = document.getElementById('newTeacher').value;
+            alert("Mentor change successfully.");
+
+            // Implement your logic for replacing the teacher
+            console.log('Replace ' + currentTeacher + ' with ' + newTeacher);
+        }
+    </script>
+</body>
+
+</html>

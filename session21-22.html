@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Projects</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(3, 3, 30);
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+    header {
+      background-color: white;
+      color: black;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+      position: relative;
+      border-radius: 8px;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    header:hover .logo {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      flex: 1;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    header:hover {
+      color: #7b7bff;
+    }
+
+    .content {
+      width: 80%;
+      margin: 20px auto;
+      background-color: #3d405b;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #5d6292;
+    }
+
+    th {
+      background-color: #1d1e2c;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #2b2d42;
+    }
+
+    .search-container {
+      margin-bottom: 20px;
+    }
+
+    .search-input {
+      padding: 10px;
+      width: 200px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="./assets/ABES.jpg" alt="Your Logo" class="logo">
+    </div>
+    <h1>Student Projects[2021-2022]</h1>
+  </header>
+
+  <div class="content">
+    <div class="search-container">
+      <label for="search">Search:</label>
+      <input type="text" id="search" class="search-input" oninput="searchTable()" placeholder="Enter Name">
+    </div>
+
+    <table id="projectsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Year</th>
+          <th>Project Name</th>
+          <th>Short Description</th>
+          <th>Project ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>KSHITIZ</td>
+          <td>Second Year</td>
+          <td>EMPROSS</td>
+          <td>Project Managing System...To Digitalise The Whole Project System</td>
+          <td>PRJ0001</td>
+        </tr>
+        <tr>
+            <td>MAYANK</td>
+            <td>Second Year</td>
+            <td>WATER HARVESTING</td>
+            <td>Project Managing System...To Digitalise The Whole Project System</td>
+            <td>PRJ0006</td>
+          </tr>
+          <tr>
+            <td>VANSH</td>
+            <td>Second Year</td>
+            <td>WASTE MANAGING</td>
+            <td>Project Managing System...To Digitalise The Whole Project System</td>
+            <td>PRJ0007</td>
+          </tr>
+          <tr>
+            <td>LAKSHYA</td>
+            <td>Second Year</td>
+            <td>GAS PIPELINE FIX</td>
+            <td>Project Managing System...To Digitalise The Whole Project System</td>
+            <td>PRJ0004</td>
+          </tr>
+       
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function searchTable() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("search");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("projectsTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those that don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0]; // Change index to match the column you want to search
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership Board</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(3, 3, 30);
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+    header {
+      background-color: white;
+      color: black;
+      padding: 8px;
+      text-align: center;
+      font-size: 1.4em;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+      position: relative;
+      border-radius: 8px;
+    }
+
+    .logo {
+      max-width: 140px;
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    header:hover .logo {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      flex: 1;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    header:hover {
+      color: #7b7bff;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    .card {
+      width: 300px;
+      background-color: #3d405b;
+      color: #fff;
+      margin: 60px;
+      margin-top: 8px;
+      margin-right: 60px;
+      margin-bottom: 25px;
+      padding: 1px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      
+      box-shadow: 8px 8px 37px rgba(255, 255, 255, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      object-fit: contain;
+      max-height: 200px;
+      margin-top: 8px;
+      
+    }
+
+    .card-content {
+      padding-left: 10px;
+      
+    }
+
+    .card-content a {
+      color: black; /* Set link color to black */
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .card-content a:hover {
+      color: #5959d6; /* Change link color on hover */
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="./assets/ABES.jpg" alt="Your Logo" class="logo">
+    </div>
+    <h1>Current Programme Leaders</h1>
+  </header>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="./assets/malvikamam.jpeg" alt="Leader 1">
+      <div class="card-content">
+        <h2>2023-2027</h2>
+        <p><a href="https://www.linkedin.com/in/malvika-gupta-53294b2a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Ms.Malvika Gupta
+        </a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/dubeysir.jpeg" alt="Leader 2">
+      <div class="card-content">
+        <h2>2022-2026</h2>
+        <p><a href="https://www.linkedin.com/in/dr-anil-kumar-dubey-smieee-1556701a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Dr. Anil Kumar Dubey</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/devendramishra.jpeg" alt="Leader 3">
+      <div class="card-content">
+        <h2>2021-2025</h2>
+        <p><a href="https://www.linkedin.com/in/prof-dr-devendra-kumar-00750415/">Mr.Devendra Kumar Misra
+        </a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/akhileshsir.jpeg" alt="Leader 4">
+      <div class="card-content">
+        <h2>2020-2024</h2>
+        <p><a href="https://www.linkedin.com/in/akhilesh-kumar-srivastava-3a137b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Mr.Akhilesh Kumar Srivastava</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

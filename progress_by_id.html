@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Finder</title>
+  <style>
+    header:hover {
+      color: #7b7bff;
+      
+      }
+      ::placeholder{
+        color: #000000;
+    }
+      
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(3, 3, 30);
+      color: #000000;
+      transition: background 0.3s ease;
+    }
+
+    header {
+      background-color: white;
+      color: black;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+      position: relative;
+      border-radius: 8px
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    header:hover .logo {
+      transform: scale(1.1);transition: color 0.3s ease; 
+    }
+
+    h1 {
+      flex: 1;
+      left: 20%;
+      
+    }
+
+    body:hover header:hover::before {
+      opacity: 1;
+    }
+
+    .form_main { 
+      width: 70%;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #5d6292;
+      
+      
+      padding: 30px;
+      box-shadow: 40px 30px 37px rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    
+    .form_main::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      
+      /* background-color: #1d1e2c; */
+      z-index: -1;
+    }
+
+    .inputField {
+      width: 100%;
+      height: 40px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid #ddd;
+      margin: 20px 0;
+      color: #ddd;
+      font-size: 18px;
+      box-sizing: border-box;
+      padding-left: 10px;
+    }
+
+    .inputField:focus {
+      outline: none;
+      border-bottom: 2px solid #7b7bff;
+    }
+
+    #button {
+      width: 100%;
+      border: none;
+      background-color: #7b7bff;
+      height: 40px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    #button:hover {
+      background-color: #665dff;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="./assets/ABES.jpg" alt="Your Logo" class="logo">
+    </div>
+    <h1>Progress Finder</h1>
+  </header>
+  <div class="form_main">
+    <form id="progressForm">
+      <input type="text" class="inputField" id="projectID" style="color:#000000;important" placeholder="Enter Project ID">
+      <button id="button" type="button" onclick="findProgress()">Find Progress</button>
+    </form>
+  </div>
+
+  <script>
+    function findProgress() {
+      var projectID = document.getElementById('projectID').value;
+
+      if (projectID === 'PRJ0001') {
+        window.location.href = './session1.html'; 
+      }
+     else if (projectID === 'PRJ0004') {
+        window.location.href = './session2.html'; 
+      }
+      else if (projectID === 'PRJ0006') {
+        window.location.href = './session3.html'; 
+      } 
+      else if (projectID === 'PRJ0007') {
+        window.location.href = './session4.html'; 
+      }else {
+        alert('Invalid Project ID. Please try again.'); // You can customize the alert message as needed
+      }
+    }
+  </script>
+
+</body>
+</html>
